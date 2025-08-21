@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Care Line Health Care</title>
+  <style>
+    :root {
+      --primary-color: #6a1b9a;
+      --accent-color: #4a148c;
+      --background-light: #ffffff;
+      --text-dark: #333;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #dfe9f3, #ffffff, #e0f7fa);
+      color: var(--text-dark);
+    }
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav {
+      background-color: var(--accent-color);
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      padding: 8px;
+    }
+    section {
+      padding: 20px;
+    }
+    .specialized, .service {
+      background: var(--background-light);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    h2 {
+      color: var(--accent-color);
+    }
+    @media (min-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav a {
+        margin: 0 20px;
+      }
+    }
+    @media (min-width: 900px) {
+      body {
+        padding: 20px;
+      }
+      section {
+        max-width: 900px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Care Line Health Care</h1>
+    <p>24/7 Specialized Nursing, Laboratory & Wellness Support</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Care Line Health Care, we provide round-the-clock professional care with a focus on wellness, mental health, geriatric care, and personalized services. We also offer hiring and staffing services for healthcare professionals and outreach programs to extend quality care beyond boundaries.</p>
+  </section>
+
+  <section id="services">
+    <h2>Specialized Services</h2>
+    <div class="specialized">
+      <h3>Laboratory Analysis</h3>
+      <ul>
+        <li>Hormonal Analysis – Male & Female</li>
+        <li>Fertility Analysis – Male & Female</li>
+        <li>General Body Checkup – Male & Female</li>
+      </ul>
+    </div>
+    <div class="specialized">
+      <h3>Adult Vaccination</h3>
+      <ul>
+        <li>Hepatitis A, B, C</li>
+        <li>Typhoid</li>
+        <li>Malaria</li>
+        <li>HPV, RSV, PCV, Pentavalent</li>
+      </ul>
+    </div>
+    <div class="specialized">
+      <h3>Wellness Package</h3>
+      <ul>
+        <li>Vitamin C Infusion</li>
+        <li>Vitamin B Infusion</li>
+        <li>Nutrition Support</li>
+        <li>Anti-Stress Infusion</li>
+      </ul>
+    </div>
+    <div class="specialized">
+      <h3>Mental Health Services</h3>
+      <p>Support and care for individuals experiencing emotional, psychological or behavioral challenges.</p>
+    </div>
+    <div class="specialized">
+      <h3>Geriatric Care</h3>
+      <ul>
+        <li>Wound Care</li>
+        <li>Diabetes & Hypertension Management</li>
+        <li>Stroke Rehabilitation</li>
+        <li>General Elderly Care</li>
+      </ul>
+    </div>
+    <div class="specialized">
+      <h3>Special Services</h3>
+      <ul>
+        <li>Medical Outreach Programs</li>
+        <li>Employee Laboratory Testing</li>
+        <li>Occupational Health Services</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Book Our Services</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" required />
+
+      <label for="service">Select a Service</label>
+      <select id="service" name="service" required>
+        <option value="Hormonal Analysis">Hormonal Analysis</option>
+        <option value="Fertility Analysis">Fertility Analysis</option>
+        <option value="General Checkup">General Body Checkup</option>
+        <option value="Vaccination">Adult Vaccination</option>
+        <option value="Wellness">Wellness Package</option>
+        <option value="Mental Health">Mental Health Services</option>
+        <option value="Geriatric Care">Geriatric Care</option>
+        <option value="Special Services">Special Services</option>
+      </select>
+
+      <label for="message">Additional Notes</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your preferred date, address, etc..."></textarea>
+
+      <button type="submit" class="btn">Submit Booking</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: <a href="tel:+2347053860794">07053860794</a></p>
+    <p>Email: carelinehealthcare@gmail.com</p>
+    <p>WhatsApp: <a href="https://wa.me/2347053860794" class="btn">Chat Now</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Care Line Health Care. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
